@@ -10,6 +10,9 @@
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 
+# Files to ignore
+/MTEC-2120-Interact-Project/MTEC 2120 Interact Group Project/Library/ArtifactDB
+
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
 
