@@ -13,11 +13,15 @@ public class ForInputs : MonoBehaviour
     {
         Vector3 ballPosition = new Vector3(Random.Range(-2.5f, 2.5f), Random.Range(1, 2.5f), Random.Range(-2.5f, 2.5f));
         Instantiate(ball, ballPosition, Quaternion.identity);
-
     }
 
     public void Restart(InputAction.CallbackContext context)
     {
         Application.LoadLevel(0);
+    }
+
+    public void changeColor(InputAction.CallbackContext context)
+    {
+        GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
     }
 }

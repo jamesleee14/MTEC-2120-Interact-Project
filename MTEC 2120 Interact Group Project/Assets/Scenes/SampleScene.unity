@@ -581,7 +581,19 @@ MonoBehaviour:
     m_ActionId: ef202ce9-5d4d-4b31-8eb5-78b0fba2cd6a
     m_ActionName: Inputs/DeactivateParticles[/Mouse/rightButton]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1527208170}
+        m_TargetAssemblyTypeName: ForInputs, Assembly-CSharp
+        m_MethodName: changeColor
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: ac04b100-76a3-4a60-9846-9492dbbf7fec
     m_ActionName: Inputs/Gravity[/Keyboard/enter]
   m_NeverAutoSwitchControlSchemes: 0
