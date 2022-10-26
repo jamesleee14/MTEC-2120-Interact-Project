@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -412,6 +412,7 @@ GameObject:
   - component: {fileID: 1527208166}
   - component: {fileID: 1527208165}
   - component: {fileID: 1527208164}
+  - component: {fileID: 1527208170}
   - component: {fileID: 1527208169}
   m_Layer: 0
   m_Name: Sphere
@@ -526,7 +527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: b4f9cdaf0afb046ac9a4551cf630f713, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 7a27e2177beddef4780d08ed6d874d3e, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -540,39 +541,64 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 61fce891-3ee2-48c7-bccb-42ce069324d7
-    m_ActionName: Spawn Shapes/New action[/Keyboard/space]
-  - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1527208170}
+        m_TargetAssemblyTypeName: ForInputs, Assembly-CSharp
+        m_MethodName: OnFire
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 9ad7c1b6-74d2-40c4-9b82-f61c91f2c5ab
-    m_ActionName: Gravity/New action[/Keyboard/enter]
+    m_ActionId: e8e610c0-5c88-4112-b390-f92171993753
+    m_ActionName: Inputs/Spawn Shapes[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1527208170}
+        m_TargetAssemblyTypeName: ForInputs, Assembly-CSharp
+        m_MethodName: OnFire
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: de03b8b9-5025-4380-a319-142d8703882f
+    m_ActionName: Inputs/Reset[/Keyboard/r]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 606c0f49-b1c2-4f18-9cf5-a50b11a7e421
-    m_ActionName: Reset/New action[/Keyboard/r]
+    m_ActionId: 70100081-0f27-421f-8a78-a36b643c90c8
+    m_ActionName: Inputs/ActivateParticles[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 6f489459-db21-427b-a1c5-929ccb86d0f8
-    m_ActionName: ActivateParticles/New action[/Mouse/leftButton]
+    m_ActionId: ef202ce9-5d4d-4b31-8eb5-78b0fba2cd6a
+    m_ActionName: Inputs/DeactivateParticles[/Mouse/rightButton]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 741c354c-c3c5-40e4-8bd2-d06de1fcd837
-    m_ActionName: DeactivateParticles/New action[/Mouse/rightButton]
+    m_ActionId: ac04b100-76a3-4a60-9846-9492dbbf7fec
+    m_ActionName: Inputs/Gravity[/Keyboard/enter]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Gravity
+  m_DefaultActionMap: Inputs
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1527208170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527208163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f60322b1a82b084a97d21f39949fee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 2209831467932223729, guid: 1de6e43559cad2842b9133839f7d9626, type: 3}
